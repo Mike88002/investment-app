@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {HeaderComponent} from "./header/header/header.component";
 import {UserInputComponent} from "./user-input/user-input.component";
 import {InvestmentOutputComponent} from "./investment-output/investment-output.component";
@@ -22,14 +22,15 @@ export interface userInput {
 })
 export class AppComponent {
 
-  resultsData?: {
-    year: number,
-    interest: number,
-    valueEndOfYear: number,
-    annualInvestment: number,
-    totalInterest: number,
-    totalAmountInvested: number
-  }[];
+  // questo signal puo avere o quel mega oggetto o un valore undefined
+ resultsData = signal<{
+   year: number,
+   interest: number,
+   valueEndOfYear: number,
+   annualInvestment: number,
+   totalInterest: number,
+   totalAmountInvested: number
+ }[] | undefined>(undefined)
 
   calculateInvestmentResults(
     data: userInput
@@ -56,6 +57,6 @@ export class AppComponent {
       });
     }
 
-   this.resultsData = annualData;
+   this.resultsData.set(annualData);
   }
 }
