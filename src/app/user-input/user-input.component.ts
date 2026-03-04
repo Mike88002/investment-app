@@ -32,9 +32,5 @@ export class UserInputComponent {
         annualInvestment: +this.enteredAnnualInvestment()
       }
     )
-   this.enteredInitialInvestment.set('0');
-   this.enteredDuration.set('0');
-   this.enteredReturnRate.set('0');
-   this.enteredAnnualInvestment.set('0');
   }
 }
