@@ -1,5 +1,5 @@
 import {Component, signal} from '@angular/core';
-import {HeaderComponent} from "./header/header/header.component";
+import {HeaderComponent} from "./header/header.component";
 import {UserInputComponent} from "./user-input/user-input.component";
 import {InvestmentOutputComponent} from "./investment-output/investment-output.component";
 
