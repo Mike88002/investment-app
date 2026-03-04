@@ -1,13 +1,8 @@
-import {Component, computed, inject, input} from '@angular/core';
-import {CurrencyPipe} from "@angular/common";
+import {Component, computed, inject} from '@angular/core';
 import {InvestmentService} from "../investment.service";
 
 @Component({
   selector: 'app-investment-output',
-  standalone: true,
-  imports: [
-    CurrencyPipe
-  ],
   templateUrl: './investment-output.component.html',
   styleUrl: './investment-output.component.css'
 })
