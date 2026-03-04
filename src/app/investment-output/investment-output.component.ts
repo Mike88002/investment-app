@@ -10,6 +10,7 @@ export class InvestmentOutputComponent {
   // result = input<>();
   private investmentService = inject(InvestmentService);
 
+
   results= computed(() => this.investmentService.resultsData());
 
 }
